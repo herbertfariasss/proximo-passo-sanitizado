@@ -1,0 +1,142 @@
+# ============================================
+# .gitignore - Próximo Passo
+# ============================================
+# Arquivos e pastas que NÃO devem ser commitados no Git
+
+# ============================================
+# CONFIGURAÇÕES SENSÍVEIS
+# ============================================
+.env
+.env.*
+!.env.example
+
+# Scripts de debug e token de teste (podem expor dados)
+token.txt
+/debug-*.php
+/test-*.php
+/test.php
+
+# Backup do config caso você edite
+api/config/config.php.backup
+
+# ============================================
+# LOGS
+# ============================================
+*.log
+logs/
+error.log
+access.log
+
+# ============================================
+# BANCO DE DADOS
+# ============================================
+# Backups de banco
+*.sql.backup
+*.sql.gz
+database/backups/
+
+# Arquivos temporários do MySQL
+*.ibd
+*.frm
+
+# ============================================
+# PHP
+# ============================================
+# Cache do Composer (se usar no futuro)
+vendor/
+composer.lock
+
+# ============================================
+# IDE / EDITORES
+# ============================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PHPStorm / IntelliJ
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# NetBeans
+nbproject/
+
+# Eclipse
+.project
+.buildpath
+.settings/
+
+# ============================================
+# SISTEMA OPERACIONAL
+# ============================================
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+# ============================================
+# TEMPORÁRIOS
+# ============================================
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Cache
+cache/
+tmp/
+temp/
+
+# ============================================
+# UPLOADS (caso implemente upload de arquivos)
+# ============================================
+uploads/*
+!uploads/.gitkeep
+
+# ============================================
+# NODE MODULES (caso use npm no futuro)
+# ============================================
+node_modules/
+
+# ============================================
+# TESTES
+# ============================================
+# Coverage reports
+coverage/
+phpunit.xml
+.phpunit.result.cache
+
+# ============================================
+# AMBIENTE LOCAL
+# ============================================
+# Configurações locais de desenvolvimento
+.local
+local.php
+local_config.php
+
+# ============================================
+# IMPORTANTE: SEMPRE COMITAR
+# ============================================
+# Estes arquivos DEVEM ir para o Git:
+# - .env.example (template de configuração)
+# - database/schema.sql (estrutura do banco)
+# - README.md
+# - Todos os arquivos de código fonte
+
+# Use "!" para forçar inclusão de arquivos específicos:
+# !important-file.txt
